@@ -1,5 +1,5 @@
 /*---
-title:   Grid
+title:   Grid Mixin
 section: Mixin
 ---
 
@@ -19,9 +19,8 @@ $o-grid-spacing-sizes: (
   xl: map-get($spacing, m)
 ) !default;
 
-/**
- * Mixins
- */
+
+
 @mixin o-grid($flex: $o-grid-flex) {
   @if $flex {
     display: flex;
