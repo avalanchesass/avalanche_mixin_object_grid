@@ -46,7 +46,7 @@ $o-grid-spacing-sizes: (
 }
 
 @mixin o-grid-item($flex: $o-grid-flex) {
-  @if $o-grid-flex != true {
+  @if $flex != true {
     float: left;
   }
 }
