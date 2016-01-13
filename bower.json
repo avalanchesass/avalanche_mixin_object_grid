@@ -9,7 +9,7 @@
   "license": "GPL v2",
   "dependencies": {
     "avalanche_base_box_sizing_reset": "avalanchesass/avalanche_base_box_sizing_reset#dev-3.0.0",
-    "avalanche_utility_clearfix": "avalanchesass/avalanche_utility_clearfix#dev-3.0.0"
+    "avalanche_mixin_utility_clearfix": "avalanchesass/avalanche_mixin_utility_clearfix#dev-3.0.0"
   },
   "main": "scss/_grid.scss",
   "ignore": [
