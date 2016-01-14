@@ -10,10 +10,10 @@ Fluid width, responsive grid system.
 o-grid([$flex: $o-grid-flex])
 
 // Vertical spacing between grid items.
-o-grid-spaced-vertical([$spacing: map-get($o-grid-spacing-sizes, m)[, $item-selector: '.o-grid__item']])
+o-grid-spaced-vertical([$spacing: map-get($spacing, m)[, $item-selector: '.o-grid__item']])
 
 // Horizontal spacing between grid items.
-o-grid-spaced-horizontal([$spacing: map-get($o-grid-spacing-sizes, m)[, $item-selector: '.o-grid__item']])
+o-grid-spaced-horizontal([$spacing: map-get($spacing, m)[, $item-selector: '.o-grid__item']])
 
 // Basic grid item.
 o-grid-item([$flex: $o-grid-flex])
@@ -37,14 +37,6 @@ o-grid-item([$flex: $o-grid-flex])
 // Flexbox grid system.
 $o-grid-flex: true !default;
 
-// Spacing size between items.
-$o-grid-spacing-sizes: (
-  s: map-get($spacing, m),
-  m: map-get($spacing, m),
-  l: map-get($spacing, m),
-  xl: map-get($spacing, m)
-) !default;
-
 
 
 @mixin o-grid($flex: $o-grid-flex) {
@@ -56,14 +48,14 @@ $o-grid-spacing-sizes: (
   }
 }
 
-@mixin o-grid-spaced-vertical($spacing: map-get($o-grid-spacing-sizes, m), $item-selector: '.o-grid__item') {
+@mixin o-grid-spaced-vertical($spacing: map-get($spacing, m), $item-selector: '.o-grid__item') {
   margin-top: -$spacing;
   > #{$item-selector} {
     margin-top: $spacing;
   }
 }
 
-@mixin o-grid-spaced-horizontal($spacing: map-get($o-grid-spacing-sizes, m), $item-selector: '.o-grid__item') {
+@mixin o-grid-spaced-horizontal($spacing: map-get($spacing, m), $item-selector: '.o-grid__item') {
   margin-left: -$spacing;
   > #{$item-selector} {
     padding-left: $spacing;
