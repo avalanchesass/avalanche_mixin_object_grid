@@ -4,6 +4,32 @@ section: Mixin
 ---
 
 Fluid width, responsive grid system.
+
+```css
+// Basic grid.
+o-grid([$flex: $o-grid-flex])
+
+// Vertical spacing between grid items.
+o-grid-spaced-vertical([$spacing: map-get($o-grid-spacing-sizes, m)[, $item-selector: '.o-grid__item']])
+
+// Horizontal spacing between grid items.
+o-grid-spaced-horizontal([$spacing: map-get($o-grid-spacing-sizes, m)[, $item-selector: '.o-grid__item']])
+
+// Basic grid item.
+o-grid-item([$flex: $o-grid-flex])
+```
+
+```css
+.foo {
+  @include o-grid();
+  @include o-grid-spaced-vertical();
+  @include o-grid-spaced-horizontal();
+}
+
+.bar {
+  @include o-grid-item();
+}
+```
 */
 /**
  * Variables
