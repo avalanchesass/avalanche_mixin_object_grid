@@ -55,7 +55,7 @@ o-grid-item([$-flex: true])
 }
 
 @mixin o-grid-item($-flex: true) {
-  @if $-flex != true {
+  @if not $-flex {
     float: left;
   }
 }
