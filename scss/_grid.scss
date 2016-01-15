@@ -7,16 +7,16 @@ Fluid width, responsive grid system.
 
 ```css
 // Basic grid.
-o-grid([$flex: true])
+o-grid([$-flex: true])
 
 // Vertical spacing between grid items.
-o-grid-spaced-vertical([$spacing: map-get($spacing, m)[, $item-selector: '.o-grid__item']])
+o-grid-spaced-vertical([$-spacing: map-get($spacing, m)[, $-item-selector: '.o-grid__item']])
 
 // Horizontal spacing between grid items.
-o-grid-spaced-horizontal([$spacing: map-get($spacing, m)[, $item-selector: '.o-grid__item']])
+o-grid-spaced-horizontal([$-spacing: map-get($spacing, m)[, $-item-selector: '.o-grid__item']])
 
 // Basic grid item.
-o-grid-item([$flex: true])
+o-grid-item([$-flex: true])
 ```
 
 ```css
@@ -31,8 +31,8 @@ o-grid-item([$flex: true])
 }
 ```
 */
-@mixin o-grid($flex: true) {
-  @if $flex {
+@mixin o-grid($-flex: true) {
+  @if $-flex {
     display: flex;
     flex-wrap: wrap;
   } @else {
@@ -40,22 +40,22 @@ o-grid-item([$flex: true])
   }
 }
 
-@mixin o-grid-spaced-vertical($spacing: map-get($spacing, m), $item-selector: '.o-grid__item') {
-  margin-top: -$spacing;
-  > #{$item-selector} {
-    margin-top: $spacing;
+@mixin o-grid-spaced-vertical($-spacing: map-get($spacing, m), $-item-selector: '.o-grid__item') {
+  margin-top: -$-spacing;
+  > #{$-item-selector} {
+    margin-top: $-spacing;
   }
 }
 
-@mixin o-grid-spaced-horizontal($spacing: map-get($spacing, m), $item-selector: '.o-grid__item') {
-  margin-left: -$spacing;
-  > #{$item-selector} {
-    padding-left: $spacing;
+@mixin o-grid-spaced-horizontal($-spacing: map-get($spacing, m), $-item-selector: '.o-grid__item') {
+  margin-left: -$-spacing;
+  > #{$-item-selector} {
+    padding-left: $-spacing;
   }
 }
 
-@mixin o-grid-item($flex: true) {
-  @if $flex != true {
+@mixin o-grid-item($-flex: true) {
+  @if $-flex != true {
     float: left;
   }
 }
