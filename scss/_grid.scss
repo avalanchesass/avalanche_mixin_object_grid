@@ -7,7 +7,7 @@ Fluid width, responsive grid system.
 
 ```css
 // Basic grid.
-o-grid([$flex: $o-grid-flex])
+o-grid([$flex: true])
 
 // Vertical spacing between grid items.
 o-grid-spaced-vertical([$spacing: map-get($spacing, m)[, $item-selector: '.o-grid__item']])
@@ -16,7 +16,7 @@ o-grid-spaced-vertical([$spacing: map-get($spacing, m)[, $item-selector: '.o-gri
 o-grid-spaced-horizontal([$spacing: map-get($spacing, m)[, $item-selector: '.o-grid__item']])
 
 // Basic grid item.
-o-grid-item([$flex: $o-grid-flex])
+o-grid-item([$flex: true])
 ```
 
 ```css
@@ -31,15 +31,7 @@ o-grid-item([$flex: $o-grid-flex])
 }
 ```
 */
-/**
- * Variables
- */
-// Flexbox grid system.
-$o-grid-flex: true !default;
-
-
-
-@mixin o-grid($flex: $o-grid-flex) {
+@mixin o-grid($flex: true) {
   @if $flex {
     display: flex;
     flex-wrap: wrap;
@@ -62,7 +54,7 @@ $o-grid-flex: true !default;
   }
 }
 
-@mixin o-grid-item($flex: $o-grid-flex) {
+@mixin o-grid-item($flex: true) {
   @if $flex != true {
     float: left;
   }
