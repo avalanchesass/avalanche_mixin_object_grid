@@ -1,5 +1,5 @@
 # avalanche_mixin_object_grid
-Fluid width, responsive grid system.  
+Fluid width, responsive grid system  
 https://github.com/avalanchesass/avalanche_mixin_object_grid
 
 ### Author
